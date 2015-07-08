@@ -149,10 +149,12 @@ body {
 }
 
 .star-color {
+	position: relative;
 	color: gold;
-	margin-left: 5px;
+	margin-left: 170px;
 }
 
 .delete-button {
 	border: 1px dashed black;
+	margin-left: 10px;
 }
