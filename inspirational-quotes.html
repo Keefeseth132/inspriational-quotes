@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="inspirational-quotes.css">
 	<meta charset="UTF-8">
@@ -13,13 +14,12 @@
 	<div class="my-web"><strong>Quotes and Stuff</strong></div>
 </div>
 
-<nav>
-	<ul class="nav-bar">
-		<li>HOME</li>
-		<li>PAGE</li>
-		<li>PAGE</li>
+<div>
+	<ul class="bar">
+		<li id="random-quote">Random Quote</li>
+		<li id="delete">Delete last</li>
 	</ul>
-</nav>
+</div>
 
 <div class="first-section">
   <header>
@@ -36,18 +36,15 @@
 <div class="author-box-container">
 <form class="author-box">
 	<label>Author</label>
-		<input class="input-size" type="text"><br>
+		<input class="input-size" id="input-edit" type="text"><br>
 </form>
 </div>
 
-<textarea class="text-box">type your quotes here</textarea>
+<textarea class="text-box"></textarea>
 
 <input class="submit" type=submit value="SUBMIT">
 
-<div class="bottom-container">quotes need to end up here <span class="star-color">&#9733;&#9733;&#9733;&star;&star;</span>
-<span class="delete-button">delete?</span>
-</div>
-
+<div class="bottom-container"></div>
 
 </div>
 
