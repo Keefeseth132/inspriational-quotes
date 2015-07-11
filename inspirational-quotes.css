@@ -1,5 +1,5 @@
 body {
-	background-color: peachpuff;
+	background-color: #DADFE3;
 	margin: auto; 
 	font-family: sans-serif;
 }
@@ -19,25 +19,31 @@ body {
 .top-box {
 	max-width: 700px;
 	height: 150px;
-	background-color: tan;
-	border-bottom: 6px solid lightblue;
+	background-color: #509AE4;
+	border-bottom: 6px solid #68CDE4;
 	margin: 0px;
 }
 
 .bar {
 	height: 40px;
-    background-color: #34495e;
-    line-height: 30px;
+    background-color: #3B889B;
+    line-height: 39px;
     max-width: 700px;
     text-align: right;
-    margin: 0;
+    margin: 0 auto;
 	vertical-align: middle;
 	color: white;
+
 }
 
-.bar li {
+.bar-buttons {
 	display: inline;
 	padding: 0px 10px;
+	height: 40px;
+}
+
+.bar-buttons:hover {
+	background-color: blue;
 }
 
 .my-web {
@@ -52,7 +58,7 @@ body {
 
 .first-section {
 	max-width: 700px;
-	background-color: grey    ;
+	background-color: #F1F7FB;
 	margin-bottom: 20px;
 	top: 0;
 	padding: 10px;
@@ -102,7 +108,7 @@ body {
 }
 
 .submit {
-	background-color: #c0392b;
+	background-color: #90BCFF;
 	color: white;
 	width: 507px;
 	height: 35px;
@@ -138,8 +144,8 @@ body {
 }
 
 .star-color {
+	display: inline;
 	color: gold;
-	margin-left: 200px;
 }
 
 .delete-button {

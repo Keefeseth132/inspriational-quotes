@@ -16,32 +16,53 @@ var quotes = [{
 	rating : 5 
 }]
 
-var arr = []
+var updateDom = function(){
+	for(var i = 0; i < quotes.length; i++){
+		var updateAuthor =  '<p>' + ' - ' + quotes[i].author + '</p>' + '\n' + '<span class="star-color">&star;</span> <span class="star-color">&star;</span> <span class="star-color">&star;</span> <span class="star-color">&star;</span> <span class="star-color">&star;</span> <hr> </div>' + '</div>'
+		var updateQuote = '<div class="quote-container">' + '<h3>' + quotes[i].quote + '</h3>' 
+		$('.bottom-container').append(updateQuote + updateAuthor)
+	}
+}
+updateDom()
+
 $('#random-quote').on('click', function(){
 	var randomQuote = _.sample(quotes)
-		arr.push(randomQuote)
-		console.log(arr)
+	
+	var authorEL = randomQuote.author
+	var quoteEL = randomQuote.quote
+	var outPut = $('<div class="quote-container">' + '<h3>' + quoteEL + '</h3>' + '<p>' + ' - ' + authorEL + '</p>' + '\n' + '<span class="star-color">&star;</span> <span class="star-color">&star;</span> <span class="star-color">&star;</span> <span class="star-color">&star;</span> <span class="star-color">&star;</span> </div>')
+	
+	$('.random-quote-box').html(outPut)
 })
-
-
 
 $('#delete').on('click', function(){
-	console.log('delete clicked')
-})
+	$(".bottom-container").children("div[class=quote-container]:last").remove();
+});
+
 
 $('.submit').on('click', function(){
 	 var quoteBox = $('.text-box').val()
 	 var authorBox = $('.input-size').val() 
-	 var outPut = $('<div class="quote-container">' + quoteBox + ' - ' + authorBox + '<span class="star-color">&#9733;&#9733;&#9733;&star;&star;</span> </div>' )
+	 var outPut = $('<div class="quote-container">' + '<h3>' + quoteBox + '</h3>' + '<p>' + ' - ' + authorBox + '</p>' + '\n' + '<span class="star-color">&star;</span> <span class="star-color">&star;</span> <span class="star-color">&star;</span> <span class="star-color">&star;</span> <span class="star-color">&star;</span> <hr> </div>')
+
 	$('.bottom-container').append(outPut)	
 	$('.text-box').val('')
 	$('.input-size').val('')
+	
+	quotes.push({
+	author : authorBox,
+	quote : quoteBox,
+	rating : 0
+})
+	var starRating = function(){
+
+	}
 })
 
 var sortList = function(list){
 	return _.sortBy(list, 'rating').reverse()
 }
-console.log(sortList(quotes))
+// console.log(sortList(quotes))
 
 
 
